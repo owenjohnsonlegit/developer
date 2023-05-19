@@ -76,7 +76,7 @@ naturally generated with gpt4, like [we did for babyagi](https://twitter.com/swy
 - **Debugging by `cat`ing** the whole codebase with your error message and getting specific fix suggestions - particularly delightful!
 - **Tricks for whole program coherence** - our chosen example usecase, Chrome extensions, have a lot of indirect dependencies across files. Any hallucination of cross dependencies causes the whole program to error. 
   - We solved this by adding an intermediate step asking GPT to think through `shared_dependencies.md`, and then insisting on using that in generating each file. This basically means GPT is able to talk to itself...
-  - ... but it's not perfect, yet. `shared_dependencies.md` is sometimes not comperehensive in understanding what are hard dependencies between files. So we just solved it by specifying a specific `name` in the prompt. felt dirty at first but it works, and really it's just clear unambiguous communication at the end of the day. 
+  - ... but it's not perfect, yet. `shared_dependencies.md` is sometimes not comprehensive in understanding what are hard dependencies between files. So we just solved it by specifying a specific `name` in the prompt. felt dirty at first but it works, and really it's just clear unambiguous communication at the end of the day. 
   - see `prompt.md` for SOTA smol-dev prompting
 - **Low activation energy for unfamiliar APIs**
   - we have never really learned css animations, but now can just say we want a "juicy css animated red and white candy stripe loading indicator" and it does the thing. 
